@@ -28,7 +28,7 @@ for ip in ip_list:
   sleep(2)
   form_xpath = '/html/body/center/font/form/input[1]'
   click_button_xpath = '/html/body/center/font/form/input[3]'
-
+  
   form = driver.find_element(By.XPATH, form_xpath)
   form.clear()
   form.send_keys(ip)
@@ -80,4 +80,19 @@ for ip in ip_list:
     ws2[f'B{index}'].font = openpyxl.styles.fonts.Font(color='00793D')
   wb2.save("./res.xlsx")
   index += 1
+<<<<<<< HEAD
   print(trs_count)
+=======
+  print(trs_count)
+
+
+
+
+
+
+  
+
+
+
+
+>>>>>>> origin/main
