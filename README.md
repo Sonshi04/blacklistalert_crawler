@@ -1,0 +1,3 @@
+# blacklistalert_crawler
+
+blacklistalertを巡回するだけのスクリプト
