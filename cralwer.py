@@ -7,7 +7,7 @@ from time import sleep
 
 blacklistalert_url = "https://blacklistalert.org/"
 
-driver = webdriver.Chrome("./chromedriver")
+driver = webdriver.Chrome("./chromedriver.exe")
 wait = WebDriverWait(driver=driver, timeout=60)
 driver.get(blacklistalert_url)
 
