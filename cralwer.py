@@ -38,7 +38,7 @@ trendmicro_click_selector = '#check-ip'
 for ip in ip_list:
   ##各サイト巡回
   driver.get(blacklistalert_url)
-  driver.implicitly_wait(1)
+  wait.until(EC.presence_of_element_located((By.XPATH, blacklistalert_form_xpath)))
   form = driver.find_element(By.XPATH, blacklistalert_form_xpath)
   form.clear()
   form.send_keys(ip)
@@ -79,7 +79,7 @@ for ip in ip_list:
   print(f'ip:{ip}, blacklistalert_count:{trs_count}')
   #spamcop
   driver.get(spamcop_url)
-  driver.implicitly_wait(1)
+  wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, spamcop_form_selector)))
   spamcop_form = driver.find_element(By.CSS_SELECTOR, spamcop_form_selector)
   spamcop_form.send_keys(ip)
   spamcop_click_button = driver.find_element(By.CSS_SELECTOR,spamcop_click_selector)
@@ -87,7 +87,7 @@ for ip in ip_list:
   spamcop_result = driver.find_elements(By.XPATH,spamcop_result_xpath)[0].text
   #trendmicro
   driver.get(trendmicro_url)
-  driver.implicitly_wait(1)
+  wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, trendmicro_form_selector)))
   trendmicro_form = driver.find_element(By.CSS_SELECTOR, trendmicro_form_selector)
   trendmicro_form.send_keys(ip)
   trendmicro_click_button = driver.find_element(By.CSS_SELECTOR,trendmicro_click_selector)
