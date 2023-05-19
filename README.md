@@ -2,4 +2,4 @@
 
 - blacklistalertを巡回するだけのスクリプト  
 - 入力はip.xlsxのA行のip  
-- 出力はres.xlsx  
+- 出力はresult.xlsx  
